@@ -1,0 +1,10 @@
+
+{% macro button(text, url="", link=true) %}
+{% set buttonCLass="text-center ring-2 mt-6 font-brand text-xl ring-offset-red-500 bg-red-600 px-7 pt-3 pb-4 rounded-full" %}
+
+{% if link === true %}
+<a href="{{ url }}" class="text-center ring-2 mt-6 font-brand text-xl ring-offset-red-500 bg-red-600 px-7 pt-3 pb-4 rounded-full text-hospital-500 uppercase max-w-max inline-block">{{ text }}</a>
+{% else %}
+<button class="{{ buttonClass }}">{{ text }}</button>
+{% endif %}
+{% endmacro %}

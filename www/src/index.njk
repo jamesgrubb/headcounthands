@@ -1,0 +1,48 @@
+---
+title: Head Count
+---
+
+{% import "face-awe.njk" as svg %}
+{% from "macros/button.njk" import button %}
+
+{% extends "base.njk" %}
+{% block content %}
+<div x-data="{isScrollTop : true, showCount : false}" class="fixed top-0 transform z-10 py-6 inset-x-0" :class="{'bg-white' : !isScrollTop}">
+<header :class=" showCount ? 'grid-rows-2' : 'grid-rows-1'"  @scroll.window = " isScrollTop = (window.pageYOffset > 50) ? false : true" class="container justify-between w-full gap-2 grid md:grid-rows-1 grid-cols-1 auto-cols-auto auto-rows-fr text-brown-500 text-5xl sm:text4xl container px-4">
+<nav class="row-start-1 col-start-1">
+  <h2 class="font-headline  grid grid-flow-col gap-1 justify-start leading-normal"><a class="grid grid-flow-col justify-start gap-1 hover:text-brown-700" href="/"><span x-ref="head" data-text="head" class="head relative">head</span><span data-text="count" class="count">count</span></a>
+  <a @mouseenter="$refs.head.classList.add('hovered')" @mouseleave="$refs.head.classList.remove('hovered')" data-text="hands" class="hands relative underline text-brown-300" href="/count">hands</a>
+  </h2>
+</nav>
+<aside class="contents">
+  <button @click=" showCount = !showCount" class="row-start-1 col-start-2 col-end-3 bg-brown-500 hover:bg-brown-300 focus:outline-none focus:bg-brown-300 focus:ring-2 focus:ring-inset focus:ring-red-500 self-center justify-self-center rounded-full p-1">{{ svg.face("w-10") }}</button>
+  <div x-show="showCount" :class=" isScrollTop ? 'text-hospital-500' : 'text-white'"  class="rounded inline-flex items-center justify-between text-sm text-center self-baseline bg-brown-500 row-start-2 overflow-y-hidden col-start-1 px-3 col-end-3 md:row-start-1 md:col-start-1 md:col-end-2 md:justify-self-end md:leading-normal" ><span class="font-headline text-9xl -my-32 transform -translate-y-3 mr-3">10</span> heads and counting</div>
+</aside>
+</header>
+</div>
+<div class="overflow-x-hidden mt-40 intro grid grid-cols-1 row-cols-1">
+<!-- BACKGROUND CROWD IMGE TOP  -->
+<div class=" mt-10 col-span-full row-span-full self-end justify-self-center">
+<img class="hero w-full h-auto object-cover" src="https://res.cloudinary.com/makingthings/image/upload/t_duotone-green-brand/v1607534734/headcounthands/large-crowd.png" alt="illustration of large crowd">
+</div>
+<!-- END BACKGROUND CROWD IMGE TOP  -->
+<div class="container col-span-full row-span-full grid grid-cols-1 grid-rows-1 ">
+<div class="w-full text-center transform">
+<h1 class="font-headline text-5xl uppercase md:text-8xl leading-none text-brown-500 text-center">head count</h1>
+<p class="mx-10 text-base leading-tight font-brand mt-4 text-center text-brown-500">With veryt little use case ata ll use this webapp to count heads in a picture</p>
+{{ button("start counting","/count", link=true) }}
+</div>
+<div class="w-full flex justify-center">
+{% include "phone.svg" %}
+</div>
+</div>
+<div class=" overflow-x-hidden -mx-16 mt-10 col-span-full row-span-full self-end justify-self-center">
+<img class="hero w-full h-auto object-cover" src="https://res.cloudinary.com/makingthings/image/upload/t_duotone-green-brand/v1606166951/headcounthands/masked-footer.png" alt="illustration of large crowd">
+</div>
+</div>
+<main>
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Hello%20world">
+Tweet</a>
+</main>
+{% endblock %}

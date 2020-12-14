@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+
+@font-face {
+    font-family: 'RightGrotesk-TallBold';
+    src: local('RightGrotesk-TallBold'), url('../fonts/RightGrotesk-TallBold.otf') format('otf');
+  }
+@font-face {
+    font-family: 'RightGrotesk-Medium';
+    src: local('RightGrotesk-Medium'), url('../fonts/RightGrotesk-Medium.otf') format('otf');
+  }
+
+@tailwind utilities;
+.hands:after{
+  @apply text-brown-500;
+  text-decoration: underline;
+}
+.head:after{
+  @apply text-brown-300;
+}
+.hands:after, .head:after{
+  position: absolute;
+  left:0;
+  content: attr(data-text);
+
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: all 0.3s ease;
+}
+
+.head.hovered::after{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+}
+
+.hands:hover::after{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+}
+
+.hero{
+  object-position: center 10vw;
+}
