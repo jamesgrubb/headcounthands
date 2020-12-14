@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/counts",
+            "lambdaFunction": "mainfunction",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/GET"
+                ],
+                "unauth": [
+                    "/GET"
+                ]
+            },
+            "policyResourceName": "/counts"
+        }
+    ],
+    "resourceName": "mainapi",
+    "apiName": "mainapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "mainfunction"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "amplify-headcounthands-dev-122826-authRole",
+        "unAuthRoleName": "amplify-headcounthands-dev-122826-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "mainfunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
