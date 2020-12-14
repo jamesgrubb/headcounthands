@@ -1,6 +1,4 @@
-./node_modules
-./backend/node_modules
-./_/iste
-./_tmp/
-./.DS_Store
-./package-lock.json
+node_modules/
+_tmp/
+.DS_Store
+package-lock.json/
