@@ -40,3 +40,28 @@
 .hero{
   object-position: center 10vw;
 }
+
+.crowd{
+  background-image: url("https://res.cloudinary.com/makingthings/image/upload/t_duotone-green-brand/c_fill/q_auto/v1607981945/headcounthands/group-long.png"),
+    url("https://res.cloudinary.com/makingthings/image/upload/t_duotone-green-brand/c_fill/q_auto/v1607981945/headcounthands/group-long.png");
+  background-repeat: repeat-x;
+}
+
+@layer utilities {
+  @variants responsive {
+    .crowd-small {
+      background-size: 189%, 170%;
+      background-position: 30vw 70vh, -10vw 60vh;
+    }
+    .crowd-medium {
+      background-size: 900px, 700px;
+      background-position: 30vw 120%, -10vw 98%;
+
+    }
+    .crowd-large {
+      background-size: 200%, 200%;
+      background-position: 30vw 120%, -10vw 98%;
+
+    }
+  }
+}
