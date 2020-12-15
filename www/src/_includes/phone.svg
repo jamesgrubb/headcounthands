@@ -1,4 +1,4 @@
-    <svg class="w-full h-full" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 437 866">
+    <svg class="w-full h-full" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 437 866">
       <image clip-path="url(#phone-frame)" x="50% y="50%" class="w-full" width="437" height="866" href="https://res.cloudinary.com/makingthings/image/upload/t_duotone-brown-green/v1607953587/headcounthands/iPhone-flat.jpg" />
       <defs>
     <linearGradient id="myGradient" gradientTransform="rotate(90)">

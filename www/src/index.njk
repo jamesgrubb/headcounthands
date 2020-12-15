@@ -21,7 +21,7 @@ title: Head Count
 </header>
 </div>
 <main>
-<div class="container px-4 mt-40 flex flex-wrap">
+<div class="container px-4 mt-40 flex flex-wrap relative">
   <div class="flex flex-col w-full justify-center items-center bg-red-200 md:w-2/3">
   <div class="text-center w-full md:w-1/2 text-brown-500">
   <h1 class="font-headline text-6xl uppercase mb-4">head count</h1>
@@ -33,6 +33,9 @@ title: Head Count
   <div class="flex justify-center bg-red-300 w-2/3 md:w-1/2">
     {% include "phone.svg" %}
   </div>
+  </div>
+  <div class="absolute inset-x-0 h-full overflow-x-hidden w-full bg-green-300">
+    <img class="w-full h-full object-contain object-bottom" src="https://res.cloudinary.com/makingthings/image/upload/t_duotone-green-brand/v1607877764/headcounthands/masked-medium.png" alt="">
   </div>
 </div>
 </main>

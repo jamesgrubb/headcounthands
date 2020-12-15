@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Head Count Hands | Head Count</title>
     
-    <script src="/js/alpine.js?v=1608037273888"></script>
-    <script src="/js/script.js?v=1608037273888"></script>
-    <link rel="stylesheet" href="/style.css?v=1608037273888">
+    <script src="/js/alpine.js?v=1608038521883"></script>
+    <script src="/js/script.js?v=1608038521883"></script>
+    <link rel="stylesheet" href="/style.css?v=1608038521883">
 </head>
 <body class="bg-hospital-500">
 <div x-data="data()" x-init="init($refs)" class="w-full min-h-screen">
@@ -32,7 +32,7 @@
 </header>
 </div>
 <main>
-<div class="container px-4 mt-40 flex flex-wrap">
+<div class="container px-4 mt-40 flex flex-wrap relative">
   <div class="flex flex-col w-full justify-center items-center bg-red-200 md:w-2/3">
   <div class="text-center w-full md:w-1/2 text-brown-500">
   <h1 class="font-headline text-6xl uppercase mb-4">head count</h1>
@@ -48,7 +48,7 @@
   </div>
   <div class="flex justify-center w-full md:w-1/3">
   <div class="flex justify-center bg-red-300 w-2/3 md:w-1/2">
-        <svg class="w-full h-full" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 437 866">
+        <svg class="w-full h-full" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 437 866">
       <image clip-path="url(#phone-frame)" x="50% y="50%" class="w-full" width="437" height="866" href="https://res.cloudinary.com/makingthings/image/upload/t_duotone-brown-green/v1607953587/headcounthands/iPhone-flat.jpg" />
       <defs>
     <linearGradient id="myGradient" gradientTransform="rotate(90)">
@@ -72,6 +72,9 @@
 </svg>
 
   </div>
+  </div>
+  <div class="absolute inset-x-0 h-full overflow-x-hidden w-full bg-green-300">
+    <img class="w-full h-full object-contain object-bottom" src="https://res.cloudinary.com/makingthings/image/upload/t_duotone-green-brand/v1607877764/headcounthands/masked-medium.png" alt="">
   </div>
 </div>
 </main>
