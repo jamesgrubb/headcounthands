@@ -14,11 +14,11 @@
     <script src="/js/script.js?v={% version %}"></script>
     <link rel="stylesheet" href="/style.css?v={% version %}">
 </head>
-<body class="bg-hospital-500">
+<body class="debug-screens bg-hospital-500 font-body">
 <div x-data="data()" x-init="init($refs)" class="w-full min-h-screen">
 {% block content %}
     {{ content | safe }}
 {% endblock %}
-</div>    
+</div>
 </body>
 </html>

@@ -11,8 +11,13 @@
 <path d="M62.5 7.49814C54.617 -17.278 0 29.9987 0 0V76.4987C0 53.4987 69.5 29.499 62.5 7.49814Z" fill="#956C4D"/>
 </svg>
 {% endmacro %}
-{% macro flippedBubble(class) %}
+{% macro flippedY(class) %}
 <svg class="{{ class }}" viewBox="0 0 63 77" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path transform="scale (1, -1) translate(0,0)" transform-origin="center" d="M62.5 7.49814C54.617 -17.278 0 29.9987 0 0V76.4987C0 53.4987 69.5 29.499 62.5 7.49814Z" fill="#956C4D"/>
+</svg>
+{% endmacro %}
+{% macro flippedX(class) %}
+<svg class="{{ class }}" viewBox="0 0 63 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path transform="scale (-1, 1) translate(0,0)" transform-origin="center" d="M62.5 7.49814C54.617 -17.278 0 29.9987 0 0V76.4987C0 53.4987 69.5 29.499 62.5 7.49814Z" fill="#956C4D"/>
 </svg>
 {% endmacro %}
