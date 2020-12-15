@@ -8,27 +8,32 @@ title: Head Count
 {% extends "base.njk" %}
 {% block content %}
 <div x-data="{isScrollTop : true, showCount : false}" class="fixed top-0 transform z-10 py-6 inset-x-0" :class="{'bg-white' : !isScrollTop}">
-<header :class=" showCount ? 'grid-rows-2' : 'grid-rows-1'"  @scroll.window = " isScrollTop = (window.pageYOffset > 50) ? false : true" class="container justify-between w-full gap-2 grid md:grid-rows-1 grid-cols-1 auto-cols-auto auto-rows-fr text-brown-500 text-2xl sm:text4xl container px-4">
+<header :class=" showCount ? 'grid-rows-2' : 'grid-rows-1'"  @scroll.window = " isScrollTop = (window.pageYOffset > 50) ? false : true" class="container justify-between w-full gap-2 grid md:grid-rows-1 grid-cols-1 auto-cols-auto auto-rows-fr text-brown-500 text-4xl sm:text4xl container px-4">
 <nav class="row-start-1 col-start-1">
   <h2 class="font-headline  grid grid-flow-col gap-1 justify-start leading-tight sm:leading-normal"><a class="grid grid-flow-col justify-start gap-1 hover:text-brown-700" href="/"><span x-ref="head" data-text="head" class="head relative">head</span><span data-text="count" class="count">count</span></a>
   <a @mouseenter="$refs.head.classList.add('hovered')" @mouseleave="$refs.head.classList.remove('hovered')" data-text="hands" class="hands relative underline text-brown-300" href="/count">hands</a>
   </h2>
 </nav>
 <aside class="contents">
-  <button @click=" showCount = !showCount" class="row-start-1 col-start-2 col-end-3 bg-brown-500 hover:bg-brown-300 focus:outline-none focus:bg-brown-300 focus:ring-2 focus:ring-inset focus:ring-red-500 self-center justify-self-center rounded-full p-1">{{ svg.face("h-6 sm:h-10") }}</button>
-  <div x-show="showCount" :class=" isScrollTop ? 'text-hospital-500' : 'text-white'"  class="rounded inline-flex items-center justify-between text-sm text-center self-baseline bg-brown-500 row-start-2 overflow-y-hidden col-start-1 px-3 col-end-3 md:row-start-1 md:col-start-1 md:col-end-2 md:justify-self-end md:leading-normal" ><span class="font-headline text-9xl -my-32 transform -translate-y-3 mr-3">10</span> heads and counting</div>
+  <button @click=" showCount = !showCount" class="row-start-1 col-start-2 col-end-3 bg-brown-500 hover:bg-brown-300 focus:outline-none focus:bg-brown-300 focus:ring-2 focus:ring-inset focus:ring-red-500 self-center justify-self-center rounded-full p-1">{{ svg.face("h-10 sm:h-10") }}</button>
+  <div x-show="showCount" :class=" isScrollTop ? 'text-hospital-500' : 'text-white'"  class="rounded inline-flex items-center justify-center sm:justify-between text-sm text-center self-baseline bg-brown-500 row-start-2 overflow-y-hidden col-start-1 px-3 col-end-3 md:row-start-1 md:col-start-1 md:col-end-2 md:justify-self-end md:leading-normal uppercase" ><span class="font-headline text-8xl md:text-9xl -my-32 transform -translate-y-2 mr-3">10</span> heads and counting</div>
 </aside>
 </header>
 </div>
 <main>
-  <h1 class>Head count</h1>
-<div class="relative flex w-full h-screen justify-center sm:crowd-medium">
-<div class="flex py-16 absolute w-full h-full items-end transform translate-x-10 justify-end">
-  <div class="bg-red-300 h-3/4 md:h-full justify-self-end">
-{% include "phone.svg" %}
+<div class="container px-4 mt-40 flex flex-wrap">
+  <div class="flex flex-col w-full justify-center items-center bg-red-200 md:w-2/3">
+  <div class="text-center w-full md:w-1/2 text-brown-500">
+  <h1 class="font-headline text-6xl uppercase mb-4">head count</h1>
+<p class="font-brand text-xl md:text-3xl lg:text-4xl">Remebember group shots? If you ever wanted to count the number of people in a pic.</p>
+{{ button("start counting") }}
   </div>
-</div>
-
+  </div>
+  <div class="flex justify-center w-full md:w-1/3">
+  <div class="flex justify-center bg-red-300 w-2/3 md:w-1/2">
+    {% include "phone.svg" %}
+  </div>
+  </div>
 </div>
 </main>
 
